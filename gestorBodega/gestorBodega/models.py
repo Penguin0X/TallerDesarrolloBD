@@ -1,4 +1,4 @@
-from django.db import models
+from djongo import models
 
 class Rol(models.Model):
     idRol= models.AutoField ()

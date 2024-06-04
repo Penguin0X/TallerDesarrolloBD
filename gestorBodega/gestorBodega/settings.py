@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'djongo',
 ]
 
 MIDDLEWARE = [
@@ -73,10 +74,15 @@ WSGI_APPLICATION = 'gestorBodega.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+import djongo
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'djongo',
+        'NAME': 'nombre_base_datos',
+        'ENFORCE_SCHEMA': False, # Opcional: Para evitar errores si el esquema de la base de datos no coincide
+        'CLIENT': {'host': 'mongodb://localhost:27017/'}
+
     }
 }
 
