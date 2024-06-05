@@ -2,13 +2,15 @@ from django import forms
 from .models import Juego, Rol, Personal, Ubicacion, Stock, Estado, Consola, Distribucion
 
 class FormJuegos(forms.ModelForm):
+    
     class Meta:
         model = Juego
-        fields ='__all__'
+        fields = ('codigoDeBarra','nombreJuego','imagen')
         
-    consola = forms.ModelChoiceField(queryset=Consola.objects.all(),label="Consolas")
-    distribucion = forms.ModelChoiceField(queryset=Distribucion.objects.all(),label="Distribuicion")
-    ubicacion = forms.ModelChoiceField(queryset=Ubicacion.objects.all(),label="Ubicacion")
+    consola = forms.ModelChoiceField(queryset=Consola.objects.all(), label="Consola")
+    distribucion = forms.ModelChoiceField(queryset=Distribucion.objects.all(), label="Distribuicion")
+     
+    imagen = forms.ImageField()
     
 class FormRol(forms.ModelForm):
     class Meta:

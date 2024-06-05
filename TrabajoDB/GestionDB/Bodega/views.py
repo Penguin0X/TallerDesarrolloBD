@@ -7,15 +7,22 @@ def lista_juegos(request):
     juegos = Juego.objects.all()
     return render(request, 'bodega/lista_juegos.html', {'juegos': juegos})
 
+def bucar_juego(request,nombreJuego):
+    juegos = Juego.objects.all(nombreJuego=nombreJuego)
+    return render(request, 'bodega/lista_juegos.html', {'juegos': juegos})
+    
+
 def agregar_juego(request):
     if request.method == 'POST':
         form = FormJuegos(request.POST)
         if form.is_valid():
+            print("Testing123")
             form.save()
             messages.success(request, 'Juego añadido exitosamente.')
             return redirect('lista_juegos')
-    else:
-        form = FormJuegos()
+        
+        else:
+            print("Nofunca")
     return render(request, 'bodega/agregar_juego.html', {'form': form})
 
 def editar_juego(request, pk):

@@ -1,3 +1,4 @@
+from typing import Any
 from django.db import models
 from djongo import models
 from django.core.validators import RegexValidator, MinLengthValidator
@@ -20,7 +21,7 @@ class Personal(models.Model):
 
 class Ubicacion(models.Model):
     
-    id = models.IntegerField(primary_key=True, default=None)
+    _id = models.IntegerField(primary_key=True, default=None)
     nombreUbicacion = models.CharField(max_length=100)
     descripcion = models.CharField(max_length=255)
 
@@ -28,11 +29,12 @@ class Ubicacion(models.Model):
         return "{}".format(self.nombreUbicacion)
 
 class Stock(models.Model):
+    
     ubicacion = models.CharField(max_length=100)
     cantidad = models.IntegerField(primary_key=True)
 
     def __str__(self):
-        return f"Stock: {self.cantidad} unidades en {self.ubicacion}"
+        return "{}".format(self.cantidad)
 
     def restar_cantidad(self, unidades_a_restar):
         self.cantidad -= unidades_a_restar
@@ -55,6 +57,8 @@ class Consola(models.Model):
         return "{}".format(self.nombreConsola)
 
 class Distribucion(models.Model):
+    
+    id = models.IntegerField(primary_key=True, default=None)
     localidadDistribucion = models.CharField(max_length=80)
     siglaDistribucion = models.CharField(max_length=5)
 
@@ -62,15 +66,14 @@ class Distribucion(models.Model):
         return "{}".format(self.localidadDistribucion)
 
 class Juego(models.Model):
-    
     codigoDeBarra = models.IntegerField(unique=True)
     nombreJuego = models.CharField(max_length=250)
     consola = models.EmbeddedField(model_container=Consola)
-    distribucion = models.CharField(max_length=5) # Region Juego
+    distribucion = models.EmbeddedField(model_container=Distribucion) # Region Juego
     estado = models.CharField(max_length=100) # Estados (Descontinuado - Sin Stock - ETC)
     unidades = models.EmbeddedField(model_container=Stock)
     ubicacion = models.EmbeddedField(model_container=Ubicacion)
-    imagen = models.ImageField()
+    imagen = models.ImageField(upload_to='static/')
 
     def __str__(self):
         return self.nombreJuego
