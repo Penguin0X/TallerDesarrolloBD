@@ -1,0 +1,31 @@
+[{
+  "_id": {
+    "$oid": "665f6786f715fb3687adef1c"
+  },
+  "idRol": 2,
+  "nombreRol": "bodegero"
+},{
+  "_id": {
+    "$oid": "665f6786f715fb3687adef1d"
+  },
+  "idRol": 3,
+  "nombreRol": "empaque"
+},{
+  "_id": {
+    "$oid": "665f6786f715fb3687adef1e"
+  },
+  "idRol": 4,
+  "nombreRol": "vendedor"
+},{
+  "_id": {
+    "$oid": "665f6786f715fb3687adef1f"
+  },
+  "idRol": 5,
+  "nombreRol": "administradorWed"
+},{
+  "_id": {
+    "$oid": "665f688ff715fb3687adef25"
+  },
+  "idRol": 1,
+  "nombreRol": "dueño"
+}]

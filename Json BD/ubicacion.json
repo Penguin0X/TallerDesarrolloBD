@@ -1,0 +1,637 @@
+[{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef2d"
+  },
+  "id": 1,
+  "nombreUbicacion": "ESTANTE_A1"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef2e"
+  },
+  "id": 2,
+  "nombreUbicacion": "ESTANTE_A2"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef2f"
+  },
+  "id": 3,
+  "nombreUbicacion": "ESTANTE_A3"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef30"
+  },
+  "id": 4,
+  "nombreUbicacion": "ESTANTE A4"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef31"
+  },
+  "id": 5,
+  "nombreUbicacion": "ESTANTE_A5"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef32"
+  },
+  "id": 6,
+  "nombreUbicacion": "ESTANTE_B1"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef33"
+  },
+  "id": 7,
+  "nombreUbicacion": "ESTANTE_B2"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef34"
+  },
+  "id": 8,
+  "nombreUbicacion": "ESTANTE_B3"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef35"
+  },
+  "id": 9,
+  "nombreUbicacion": "ESTANTE_B4"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef36"
+  },
+  "id": 105,
+  "nombreUbicacion": "ESTANTE_B5"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef37"
+  },
+  "id": 10,
+  "nombreUbicacion": "ESTANTE_C1"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef38"
+  },
+  "id": 11,
+  "nombreUbicacion": "ESTANTE_C2"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef39"
+  },
+  "id": 12,
+  "nombreUbicacion": "ESTANTE_C3"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef3a"
+  },
+  "id": 13,
+  "nombreUbicacion": "ESTANTE_C4"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef3b"
+  },
+  "id": 14,
+  "nombreUbicacion": "ESTANTE_C5"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef3c"
+  },
+  "id": 15,
+  "nombreUbicacion": "ESTANTE_D1"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef3d"
+  },
+  "id": 16,
+  "nombreUbicacion": "ESTANTE_D2"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef3e"
+  },
+  "id": 17,
+  "nombreUbicacion": "ESTANTE_D3"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef3f"
+  },
+  "id": 18,
+  "nombreUbicacion": "ESTANTE_D4"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef40"
+  },
+  "id": 19,
+  "nombreUbicacion": "ESTANTE_D5"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef41"
+  },
+  "id": 20,
+  "nombreUbicacion": "ESTANTE_E1"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef42"
+  },
+  "id": 21,
+  "nombreUbicacion": "ESTANTE_E2"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef43"
+  },
+  "id": 22,
+  "nombreUbicacion": "ESTANTE_E3"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef44"
+  },
+  "id": 23,
+  "nombreUbicacion": "ESTANTE_E4"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef45"
+  },
+  "id": 24,
+  "nombreUbicacion": "ESTANTE_E5"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef46"
+  },
+  "id": 25,
+  "nombreUbicacion": "ESTANTE_F1"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef47"
+  },
+  "id": 26,
+  "nombreUbicacion": "ESTANTE_F2"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef48"
+  },
+  "id": 27,
+  "nombreUbicacion": "ESTANTE_F3"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef49"
+  },
+  "id": 28,
+  "nombreUbicacion": "ESTANTE_F4"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef4a"
+  },
+  "id": 29,
+  "nombreUbicacion": "ESTANTE_F5"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef4b"
+  },
+  "id": 30,
+  "nombreUbicacion": "ESTANTE_G1"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef4c"
+  },
+  "id": 31,
+  "nombreUbicacion": "ESTANTE_G2"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef4d"
+  },
+  "id": 32,
+  "nombreUbicacion": "ESTANTE_G3"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef4e"
+  },
+  "id": 33,
+  "nombreUbicacion": "ESTANTE_G4"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef4f"
+  },
+  "id": 34,
+  "nombreUbicacion": "ESTANTE_G5"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef50"
+  },
+  "id": 35,
+  "nombreUbicacion": "ESTANTE_H1"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef51"
+  },
+  "id": 36,
+  "nombreUbicacion": "ESTANTE_H2"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef52"
+  },
+  "id": 37,
+  "nombreUbicacion": "ESTANTE_H3"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef53"
+  },
+  "id": 38,
+  "nombreUbicacion": "ESTANTE_H4"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef54"
+  },
+  "id": 39,
+  "nombreUbicacion": "ESTANTE_H5"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef55"
+  },
+  "id": 40,
+  "nombreUbicacion": "ESTANTE_I1"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef56"
+  },
+  "id": 41,
+  "nombreUbicacion": "ESTANTE_I2"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef57"
+  },
+  "id": 42,
+  "nombreUbicacion": "ESTANTE_I3"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef58"
+  },
+  "id": 43,
+  "nombreUbicacion": "ESTANTE_I4"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef59"
+  },
+  "id": 44,
+  "nombreUbicacion": "ESTANTE_I5"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef5a"
+  },
+  "id": 45,
+  "nombreUbicacion": "ESTANTE_J1"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef5b"
+  },
+  "id": 46,
+  "nombreUbicacion": "ESTANTE_J2"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef5c"
+  },
+  "id": 47,
+  "nombreUbicacion": "ESTANTE_J3"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef5d"
+  },
+  "id": 48,
+  "nombreUbicacion": "ESTANTE_J4"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef5e"
+  },
+  "id": 49,
+  "nombreUbicacion": "ESTANTE_J5"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef5f"
+  },
+  "id": 50,
+  "nombreUbicacion": "CAJASPISO_1"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef60"
+  },
+  "id": 51,
+  "nombreUbicacion": "CAJASPISO_2"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef61"
+  },
+  "id": 52,
+  "nombreUbicacion": "CAJASPISO_3"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef62"
+  },
+  "id": 53,
+  "nombreUbicacion": "CAJASPISO_4"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef63"
+  },
+  "id": 54,
+  "nombreUbicacion": "CAJASPISO_5"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef64"
+  },
+  "id": 55,
+  "nombreUbicacion": "CAJASPISO_6"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef65"
+  },
+  "id": 56,
+  "nombreUbicacion": "CAJASPISO_7"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef66"
+  },
+  "id": 57,
+  "nombreUbicacion": "CAJASPISO_8"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef67"
+  },
+  "id": 58,
+  "nombreUbicacion": "CAJASPISO_9"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef68"
+  },
+  "id": 59,
+  "nombreUbicacion": "CAJASPISO_10"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef69"
+  },
+  "id": 60,
+  "nombreUbicacion": "CAJASPISO_11"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef6a"
+  },
+  "id": 61,
+  "nombreUbicacion": "CAJASPISO_12"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef6b"
+  },
+  "id": 62,
+  "nombreUbicacion": "CAJASPISO_13"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef6c"
+  },
+  "id": 63,
+  "nombreUbicacion": "CAJASPISO_14"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef6d"
+  },
+  "id": 64,
+  "nombreUbicacion": "CAJASPISO_15"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef6e"
+  },
+  "id": 65,
+  "nombreUbicacion": "CAJASPISO_16"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef6f"
+  },
+  "id": 66,
+  "nombreUbicacion": "CAJASPISO_17"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef70"
+  },
+  "id": 67,
+  "nombreUbicacion": "CAJASPISO_18"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef71"
+  },
+  "id": 68,
+  "nombreUbicacion": "CAJASPISO_19"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef72"
+  },
+  "id": 69,
+  "nombreUbicacion": "CAJASPISO_20"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef73"
+  },
+  "id": 70,
+  "nombreUbicacion": "CAJASPISO_21"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef74"
+  },
+  "id": 71,
+  "nombreUbicacion": "CAJASPISO_22"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef75"
+  },
+  "id": 72,
+  "nombreUbicacion": "TORREPARET_1"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef76"
+  },
+  "id": 73,
+  "nombreUbicacion": "TORREPARET_2"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef77"
+  },
+  "id": 74,
+  "nombreUbicacion": "TORREPARET_3"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef78"
+  },
+  "id": 75,
+  "nombreUbicacion": "TORREPARET_4"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef79"
+  },
+  "id": 76,
+  "nombreUbicacion": "TORREPARET_5"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef7a"
+  },
+  "id": 77,
+  "nombreUbicacion": "TORREPARET_6"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef7b"
+  },
+  "id": 78,
+  "nombreUbicacion": "TORREPARET_7"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef7c"
+  },
+  "id": 79,
+  "nombreUbicacion": "TORREPARET_8"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef7d"
+  },
+  "id": 80,
+  "nombreUbicacion": "TORREPARET_9"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef7e"
+  },
+  "id": 81,
+  "nombreUbicacion": "TORREPARET_10"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef7f"
+  },
+  "id": 82,
+  "nombreUbicacion": "TORREPARET_11"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef80"
+  },
+  "id": 83,
+  "nombreUbicacion": "TORREPARET_12"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef81"
+  },
+  "id": 84,
+  "nombreUbicacion": "TORREPARET_13"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef82"
+  },
+  "id": 85,
+  "nombreUbicacion": "TORREPARET_14"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef83"
+  },
+  "id": 86,
+  "nombreUbicacion": "TORRESCAJAS_1"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef84"
+  },
+  "id": 87,
+  "nombreUbicacion": "TORRESCAJAS_2"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef85"
+  },
+  "id": 88,
+  "nombreUbicacion": "TORRESCAJAS_3"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef86"
+  },
+  "id": 89,
+  "nombreUbicacion": "TORRESCAJAS_4"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef87"
+  },
+  "id": 90,
+  "nombreUbicacion": "TORRESCAJAS_5"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef88"
+  },
+  "id": 91,
+  "nombreUbicacion": "TORRESPARETPS5_1"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef89"
+  },
+  "id": 92,
+  "nombreUbicacion": "TORRESPARETPS5_2"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef8a"
+  },
+  "id": 93,
+  "nombreUbicacion": "TORRESPARETPS5_3"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef8b"
+  },
+  "id": 94,
+  "nombreUbicacion": "TORRESPARETPS5_4"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef8c"
+  },
+  "id": 95,
+  "nombreUbicacion": "TORRESPARETPS5_5"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef8d"
+  },
+  "id": 96,
+  "nombreUbicacion": "TORRESPARETPS5_6"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef8e"
+  },
+  "id": 97,
+  "nombreUbicacion": "TORRESPARETPS5_7"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef8f"
+  },
+  "id": 98,
+  "nombreUbicacion": "TORRESPARETPS5_8"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef90"
+  },
+  "id": 99,
+  "nombreUbicacion": "TORRESPARETPS5_9"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef91"
+  },
+  "id": 100,
+  "nombreUbicacion": "TORRESPARETPS5_10"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef92"
+  },
+  "id": 101,
+  "nombreUbicacion": "TORRESPARETPS5_11"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef93"
+  },
+  "id": 102,
+  "nombreUbicacion": "TORRESPARETPS5_12"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef94"
+  },
+  "id": 103,
+  "nombreUbicacion": "TORRESPARETPS5_13"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef95"
+  },
+  "id": 104,
+  "nombreUbicacion": "TORRESPARETPS5_14"
+},{
+  "_id": {
+    "$oid": "665f7441f715fb3687adef96"
+  },
+  "id": 106,
+  "nombreUbicacion": "VITRINAVIDRIO"
+}]

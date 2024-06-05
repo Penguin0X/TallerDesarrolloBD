@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "nombreConsola": "Switch",
+    "marcaConsola": "Nintendo"
+  },
+  {
+    "id": 2,
+    "nombreConsola": "PS4",
+    "marcaConsola": "Sony"
+  },
+  {
+    "id": 3,
+    "nombreConsola": "PS5",
+    "marcaConsola": "Sony"
+  },
+  {
+    "id": 4,
+    "nombreConsola": "PS3",
+    "marcaConsola": "Sony"
+  },
+  {
+    "id": 5,
+    "nombreConsola": "3DS",
+    "marcaConsola": "Nintendo"
+  },
+  {
+    "id": 6,
+    "nombreConsola": "Xbox One",
+    "marcaConsola": "Microsoft"
+  }
+]

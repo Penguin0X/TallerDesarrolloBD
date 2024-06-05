@@ -22,7 +22,7 @@ class ConsolaAdmin(admin.ModelAdmin):
     list_display = ['nombreConsola', 'marcaConsola']
 
 class DistribucionAdmin(admin.ModelAdmin):
-    list_display = ['LocalidadDistribucion', 'siglaDistribucion']
+    list_display = ['localidadDistribucion', 'siglaDistribucion']
 
 class JuegoAdmin(admin.ModelAdmin):
     list_display = ['codigoDeBarra', 'nombreJuego', 'consola', 'distribucion', 'estado', 'unidades']

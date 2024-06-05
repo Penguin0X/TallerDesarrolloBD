@@ -1,0 +1,34 @@
+[
+  {
+    "_id": {
+      "$oid": "665f7819f715fb3687adef9f"
+    },
+    "id": 1,
+    "localidadDistribucion": "Americano",
+    "siglaDistribucion": "USA"
+  },
+  {
+    "_id": {
+      "$oid": "665f7819f715fb3687adefa0"
+    },
+    "id": 2,
+    "localidadDistribucion": "Europeo",
+    "siglaDistribucion": "EU"
+  },
+  {
+    "_id": {
+      "$oid": "665f7819f715fb3687adefa1"
+    },
+    "id": 3,
+    "localidadDistribucion": "Japonesa",
+    "siglaDistribucion": "JP"
+  },
+  {
+    "_id": {
+      "$oid": "665f7819f715fb3687adefa2"
+    },
+    "id": 4,
+    "localidadDistribucion": "Global",
+    "siglaDistribucion": "GB"
+  }
+]

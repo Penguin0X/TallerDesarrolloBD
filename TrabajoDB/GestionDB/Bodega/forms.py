@@ -5,7 +5,11 @@ class FormJuegos(forms.ModelForm):
     class Meta:
         model = Juego
         fields ='__all__'
-
+        
+    consola = forms.ModelChoiceField(queryset=Consola.objects.all(),label="Consolas")
+    distribucion = forms.ModelChoiceField(queryset=Distribucion.objects.all(),label="Distribuicion")
+    ubicacion = forms.ModelChoiceField(queryset=Ubicacion.objects.all(),label="Ubicacion")
+    
 class FormRol(forms.ModelForm):
     class Meta:
         model = Rol
