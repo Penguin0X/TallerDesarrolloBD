@@ -1,0 +1,133 @@
+[{
+  "_id": {
+    "$oid": "6660cf24d34f5565ade89fd2"
+  },
+  "id": 1,
+  "codigoDeBarra": "013388410248",
+  "nombreJuego": "ace attorney: the great ace switch",
+  "distribucion": "USA",
+  "consola": "Switch",
+  "estado": "Activo",
+  "unidades": null,
+  "imagen": "C:\\Users\\sebas\\OneDrive\\Fotos"
+},{
+  "_id": {
+    "$oid": "6660cf24d34f5565ade89fd3"
+  },
+  "id": 2,
+  "codigoDeBarra": "812008007679",
+  "nombreJuego": "ace of the luftwaffe squea switch",
+  "distribucion": "EU",
+  "consola": "Switch",
+  "estado": "Activo",
+  "unidades": null,
+  "imagen": "C:\\Users\\sebas\\OneDrive\\Fotos"
+},{
+  "_id": {
+    "$oid": "6660cf24d34f5565ade89fd4"
+  },
+  "id": 3,
+  "codigoDeBarra": "8437024411000",
+  "nombreJuego": "adsolute drift- primiun edit switch",
+  "distribucion": "EU",
+  "consola": "Switch",
+  "estado": "Activo",
+  "unidades": null,
+  "imagen": "C:\\Users\\sebas\\OneDrive\\Fotos"
+},{
+  "_id": {
+    "$oid": "6660cf24d34f5565ade89fd5"
+  },
+  "id": 4,
+  "codigoDeBarra": "045496597986",
+  "nombreJuego": "advance wars 1+2 re-boot switch",
+  "distribucion": "USA",
+  "consola": "Switch",
+  "estado": "Activo",
+  "unidades": null,
+  "imagen": "C:\\Users\\sebas\\OneDrive\\Fotos"
+},{
+  "_id": {
+    "$oid": "6660cf24d34f5565ade89fd6"
+  },
+  "id": 5,
+  "codigoDeBarra": "045496421489",
+  "nombreJuego": "bayonetta + bayonetta 2",
+  "distribucion": "EU",
+  "consola": "Switch",
+  "estado": "Activo",
+  "unidades": null,
+  "imagen": "C:\\Users\\sebas\\OneDrive\\Fotos"
+},{
+  "_id": {
+    "$oid": "6660cf24d34f5565ade89fd7"
+  },
+  "id": 6,
+  "codigoDeBarra": "045496591861",
+  "nombreJuego": "bayonetta 2",
+  "distribucion": "USA",
+  "consola": "Switch",
+  "estado": "Activo",
+  "unidades": null,
+  "imagen": "C:\\Users\\sebas\\OneDrive\\Fotos"
+},{
+  "_id": {
+    "$oid": "6660cf24d34f5565ade89fd8"
+  },
+  "id": 7,
+  "codigoDeBarra": "045496592165",
+  "nombreJuego": "bayonetta 3",
+  "distribucion": "USA",
+  "consola": "Switch",
+  "estado": "Activo",
+  "unidades": null,
+  "imagen": "C:\\Users\\sebas\\OneDrive\\Fotos"
+},{
+  "_id": {
+    "$oid": "6660d071d34f5565ade89fe9"
+  },
+  "id": 8,
+  "codigoDeBarra": "045496590475",
+  "nombreJuego": "mario kart 8 deluxe",
+  "distribucion": "USA",
+  "consola": "Switch",
+  "estado": "Activo",
+  "unidades": null,
+  "imagen": "C:\\Users\\sebas\\OneDrive\\Fotos"
+},{
+  "_id": {
+    "$oid": "6660d071d34f5565ade89fea"
+  },
+  "id": 9,
+  "codigoDeBarra": "045496597863",
+  "nombreJuego": "mario party superstars",
+  "distribucion": "USA",
+  "consola": "Switch",
+  "estado": "Activo",
+  "unidades": null,
+  "imagen": "C:\\Users\\sebas\\OneDrive\\Fotos"
+},{
+  "_id": {
+    "$oid": "6660d071d34f5565ade89feb"
+  },
+  "id": 10,
+  "codigoDeBarra": "045496598136",
+  "nombreJuego": "mario strikers battle league switch",
+  "consola": "Switch",
+  "distribucion": "activo",
+  "estado": "Activo",
+  "unidades": null,
+  "imagen": "C:\\Users\\sebas\\OneDrive\\Fotos"
+},{
+  "_id": {
+    "$oid": "6660d071d34f5565ade89fec"
+  },
+  "id": 11,
+  "codigoDeBarra": "47107821521",
+  "nombreJuego": "dead or alive xtreme 3 scarlet",
+  "consola": "Switch",
+  "distribucion": "JP",
+  "estado": "Activo",
+  "unidades": null,
+  "imagen": "C:\\Users\\sebas\\OneDrive\\Fotos"
+}]

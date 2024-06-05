@@ -1,31 +1,31 @@
 [{
   "_id": {
-    "$oid": "665f6786f715fb3687adef1c"
+    "$oid": "6660c834d34f5565ade89fc1"
   },
-  "idRol": 2,
+  "id": 1,
+  "nombreRol": "dueño"
+},{
+  "_id": {
+    "$oid": "6660c834d34f5565ade89fc2"
+  },
+  "id": 2,
   "nombreRol": "bodegero"
 },{
   "_id": {
-    "$oid": "665f6786f715fb3687adef1d"
+    "$oid": "6660c834d34f5565ade89fc3"
   },
-  "idRol": 3,
+  "id": 3,
   "nombreRol": "empaque"
 },{
   "_id": {
-    "$oid": "665f6786f715fb3687adef1e"
+    "$oid": "6660c834d34f5565ade89fc4"
   },
-  "idRol": 4,
+  "id": 4,
   "nombreRol": "vendedor"
 },{
   "_id": {
-    "$oid": "665f6786f715fb3687adef1f"
+    "$oid": "6660c834d34f5565ade89fc5"
   },
-  "idRol": 5,
-  "nombreRol": "administradorWed"
-},{
-  "_id": {
-    "$oid": "665f688ff715fb3687adef25"
-  },
-  "idRol": 1,
-  "nombreRol": "dueño"
+  "id": 5,
+  "nombreRol": "administradorWeb"
 }]
