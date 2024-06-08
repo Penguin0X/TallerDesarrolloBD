@@ -1,16 +1,54 @@
 from django import forms
 from .models import Juego, Rol, Personal, Ubicacion, Stock, Estado, Consola, Distribucion
 
+
+class FormConsola(forms.ModelForm):
+    class Meta:
+        model = Consola
+        fields = '__all__'
+
 class FormJuegos(forms.ModelForm):
+        
+    class Meta:
+        model = Juego
+        fields =('codigoDeBarra','nombreJuego','imagen')
+    
+    codigoDeBarra = forms.IntegerField()
+    nombreJuego = forms.CharField()
+    imagen = forms.ImageField()
+    
+    Plataforma = forms.ModelChoiceField(queryset=Consola.objects.all(), empty_label="Seleccionar Plataforma")
+    Región = forms.ModelChoiceField(queryset=Distribucion.objects.all(), empty_label="Seleccionar Región")
+    
+    def save(self, commit=True):
+        juego = super().save(commit=False)
+        
+        consolaSeleccionada = self.cleaned_data['Plataforma']
+        regionSeleccionada = self.cleaned_data['Región']
+
+        consolaEncontrada = Consola.objects.get(pk=consolaSeleccionada.id)
+        regionEncontrada = Distribucion.objects.get(pk=regionSeleccionada.id)
+        juego.consola = {
+            'id':consolaEncontrada.id,
+            'nombreConsola':consolaEncontrada.nombreConsola,
+            'marcaConsola':consolaEncontrada.marcaConsola
+        }
+        juego.distribucion = {
+            'id': regionEncontrada.id,
+            'localidadDistribucion':regionEncontrada.localidadDistribucion,
+            'siglaDistribucion':regionEncontrada.siglaDistribucion
+        }
+        
+        if commit:
+            juego.save()
+        
+class EditarJuegos(forms.ModelForm):
     
     class Meta:
         model = Juego
-        fields = ('codigoDeBarra','nombreJuego','imagen')
+        fields =['codigoDeBarra','nombreJuego','imagen','estado',]
         
-    consola = forms.ModelChoiceField(queryset=Consola.objects.all(), label="Consola")
-    distribucion = forms.ModelChoiceField(queryset=Distribucion.objects.all(), label="Distribuicion")
-     
-    imagen = forms.ImageField()
+
     
 class FormRol(forms.ModelForm):
     class Meta:
@@ -35,11 +73,6 @@ class FormStock(forms.ModelForm):
 class FormEstado(forms.ModelForm):
     class Meta:
         model = Estado
-        fields = '__all__'
-
-class FormConsola(forms.ModelForm):
-    class Meta:
-        model = Consola
         fields = '__all__'
 
 class FormDistribucion(forms.ModelForm):

@@ -49,6 +49,7 @@ class Estado(models.Model):
         return f"Estado: {self.nombreEstado}"
 
 class Consola(models.Model):
+
     id = models.IntegerField(primary_key=True, default=None)
     nombreConsola = models.CharField(max_length=100)
     marcaConsola = models.CharField(max_length=100)
@@ -63,7 +64,7 @@ class Distribucion(models.Model):
     siglaDistribucion = models.CharField(max_length=5)
 
     def __str__(self):
-        return "{}".format(self.localidadDistribucion)
+        return "{}".format(self.siglaDistribucion+" : "+self.localidadDistribucion)
 
 class Juego(models.Model):
     codigoDeBarra = models.IntegerField(unique=True)
@@ -73,7 +74,7 @@ class Juego(models.Model):
     estado = models.CharField(max_length=100) # Estados (Descontinuado - Sin Stock - ETC)
     unidades = models.EmbeddedField(model_container=Stock)
     ubicacion = models.EmbeddedField(model_container=Ubicacion)
-    imagen = models.ImageField(upload_to='static/')
+    imagen = models.ImageField(upload_to='juegos/')
 
     def __str__(self):
         return self.nombreJuego

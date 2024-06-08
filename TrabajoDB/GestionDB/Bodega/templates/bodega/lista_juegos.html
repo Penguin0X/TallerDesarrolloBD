@@ -43,7 +43,7 @@
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th scope="col">ID</th>
+                    <th scope="col">Codigo De Barra</th>
                     <th scope="col">Nombre Juego</th>
                     <th scope="col">Consola</th>
                     <th scope="col">Distribución</th>
@@ -53,12 +53,12 @@
                 </tr>
             </thead>
             <tbody>
-                {% for juego in Juegos %}
+                {% for juego in juegos %}
                 <tr>
-                    <td>{{ juego.id }}</td>
+                    <td>{{ juego.codigoDeBarra }}</td>
                     <td>{{ juego.nombreJuego }}</td>
-                    <td>{{ juego.consola }}</td>
-                    <td>{{ juego.distribucion }}</td>
+                    <td>{{ juego.consola.nombreConsola }}</td>
+                    <td>{{ juego.distribucion.localidadDistribucion }}</td>
                     <td>{{ juego.estado }}</td>
                     <td>{{ juego.unidades }}</td>
                     <td>

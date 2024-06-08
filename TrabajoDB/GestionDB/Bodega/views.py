@@ -1,34 +1,30 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from .models import Juego  
-from .forms import FormJuegos  
+from .models import Juego,Consola  
+from .forms import FormJuegos,EditarJuegos
 from django.contrib import messages
 
 def lista_juegos(request):
     juegos = Juego.objects.all()
     return render(request, 'bodega/lista_juegos.html', {'juegos': juegos})
 
-def bucar_juego(request,nombreJuego):
-    juegos = Juego.objects.all(nombreJuego=nombreJuego)
-    return render(request, 'bodega/lista_juegos.html', {'juegos': juegos})
-    
-
 def agregar_juego(request):
     if request.method == 'POST':
-        form = FormJuegos(request.POST)
+        form = FormJuegos(request.POST,request.FILES)
         if form.is_valid():
-            print("Testing123")
             form.save()
             messages.success(request, 'Juego añadido exitosamente.')
             return redirect('lista_juegos')
-        
-        else:
-            print("Nofunca")
+    
+    else:
+        form = FormJuegos()
+    
     return render(request, 'bodega/agregar_juego.html', {'form': form})
 
 def editar_juego(request, pk):
     juego = get_object_or_404(Juego, pk=pk)
+    form = EditarJuegos(instance=juego)
     if request.method == 'POST':
-        form = FormJuegos(request.POST, instance=juego)
+        form = EditarJuegos(request.POST, instance=juego)
         if form.is_valid():
             form.save()
             messages.success(request, 'Juego actualizado exitosamente.')
