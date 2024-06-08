@@ -1,5 +1,5 @@
 from django import forms
-from .models import Juego, Rol, Personal, Ubicacion, Stock, Estado, Consola, Distribucion
+from .models import Juego, Personal, Ubicacion, Stock, Estado, Consola, Distribucion
 
 
 class FormConsola(forms.ModelForm):
@@ -46,15 +46,46 @@ class EditarJuegos(forms.ModelForm):
     
     class Meta:
         model = Juego
-        fields =['codigoDeBarra','nombreJuego','imagen','estado',]
-        
-
+        fields =['codigoDeBarra','nombreJuego','imagen',]
     
-class FormRol(forms.ModelForm):
-    class Meta:
-        model = Rol
-        fields = '__all__'
-
+    
+    codigoDeBarra = forms.IntegerField()
+    nombreJuego = forms.CharField()
+    imagen = forms.ImageField()
+    
+    estado = forms.ModelChoiceField(queryset=Estado.objects.all(),empty_label="Seleccionar Estado")
+    Plataforma = forms.ModelChoiceField(queryset=Consola.objects.all(), empty_label="Seleccionar Plataforma")
+    Región = forms.ModelChoiceField(queryset=Distribucion.objects.all(), empty_label="Seleccionar Región")
+    
+    def save(self, commit=True):
+        juego = super().save(commit=False)
+        
+        estadoSeleccionado = self.cleaned_data['estado']
+        consolaSeleccionada = self.cleaned_data['Plataforma']
+        regionSeleccionada = self.cleaned_data['Región']
+        
+        estadoEncontrado = Estado.objects.get(pk=estadoSeleccionado.id)
+        consolaEncontrada = Consola.objects.get(pk=consolaSeleccionada.id)
+        regionEncontrada = Distribucion.objects.get(pk=regionSeleccionada.id)
+        juego.consola = {
+            'id':consolaEncontrada.id,
+            'nombreConsola':consolaEncontrada.nombreConsola,
+            'marcaConsola':consolaEncontrada.marcaConsola
+        }
+        juego.distribucion = {
+            'id': regionEncontrada.id,
+            'localidadDistribucion':regionEncontrada.localidadDistribucion,
+            'siglaDistribucion':regionEncontrada.siglaDistribucion
+        }
+        
+        juego.estado = {
+            'id': estadoEncontrado.id,
+            'nombreEstado':estadoEncontrado.nombreEstado
+        }
+        
+        if commit:
+            juego.save()
+        
 class FormPersonal(forms.ModelForm):
     class Meta:
         model = Personal

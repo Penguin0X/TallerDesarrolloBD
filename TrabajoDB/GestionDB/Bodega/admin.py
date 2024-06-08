@@ -1,10 +1,7 @@
 from django.contrib import admin
-from .models import Rol, Personal, Ubicacion, Stock, Estado, Consola, Distribucion, Juego
+from .models import Personal, Ubicacion, Stock, Estado, Consola, Distribucion, Juego
 
 # Register your models here.
-
-class RolAdmin(admin.ModelAdmin):
-    list_display = ['nombreRol']
 
 class PersonalAdmin(admin.ModelAdmin):
     list_display = ['nombrePersonal', 'rolId', 'telefono', 'usuarios']
@@ -27,7 +24,6 @@ class DistribucionAdmin(admin.ModelAdmin):
 class JuegoAdmin(admin.ModelAdmin):
     list_display = ['codigoDeBarra', 'nombreJuego', 'consola', 'distribucion', 'estado', 'unidades']
 
-admin.site.register(Rol, RolAdmin)
 admin.site.register(Personal, PersonalAdmin)
 admin.site.register(Ubicacion, UbicacionAdmin)
 admin.site.register(Stock, StockAdmin)

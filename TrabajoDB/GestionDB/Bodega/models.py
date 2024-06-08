@@ -3,12 +3,6 @@ from django.db import models
 from djongo import models
 from django.core.validators import RegexValidator, MinLengthValidator
 
-class Rol(models.Model):
-    nombreRol = models.CharField(max_length=100)
-
-    def __str__(self):
-        return self.nombreRol
-
 class Personal(models.Model):
     nombrePersonal = models.CharField(max_length=255)
     rolId = models.CharField(max_length=255)
@@ -29,9 +23,10 @@ class Ubicacion(models.Model):
         return "{}".format(self.nombreUbicacion)
 
 class Stock(models.Model):
-    
+
+    id = models.IntegerField(primary_key=True,default=None)
     ubicacion = models.CharField(max_length=100)
-    cantidad = models.IntegerField(primary_key=True)
+    cantidad = models.IntegerField()
 
     def __str__(self):
         return "{}".format(self.cantidad)
@@ -43,10 +38,11 @@ class Stock(models.Model):
         self.cantidad += unidades_a_agregar
 
 class Estado(models.Model):
+    id = models.IntegerField(primary_key=True,default=None)
     nombreEstado = models.CharField(max_length=100)
 
     def __str__(self):
-        return f"Estado: {self.nombreEstado}"
+        return "{}".format(self.nombreEstado)
 
 class Consola(models.Model):
 
@@ -67,11 +63,12 @@ class Distribucion(models.Model):
         return "{}".format(self.siglaDistribucion+" : "+self.localidadDistribucion)
 
 class Juego(models.Model):
+    
     codigoDeBarra = models.IntegerField(unique=True)
     nombreJuego = models.CharField(max_length=250)
     consola = models.EmbeddedField(model_container=Consola)
     distribucion = models.EmbeddedField(model_container=Distribucion) # Region Juego
-    estado = models.CharField(max_length=100) # Estados (Descontinuado - Sin Stock - ETC)
+    estado = models.EmbeddedField(model_container=Estado) # Estados (Descontinuado - Sin Stock - ETC)
     unidades = models.EmbeddedField(model_container=Stock)
     ubicacion = models.EmbeddedField(model_container=Ubicacion)
     imagen = models.ImageField(upload_to='juegos/')
