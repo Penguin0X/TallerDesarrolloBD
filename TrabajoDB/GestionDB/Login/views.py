@@ -12,11 +12,16 @@ def login_view(request):
             username = form.cleaned_data.get('username')
             password = form.cleaned_data.get('contrasena')
             user = User.objects.get(username=username)
-            if user is not None:
+            if user:
                 check = check_password(password,password)
-                if check is not None:
+                print(check)
+                if check == True:
                     if user.rol['id'] == 2:
                         return redirect('bodega/')
+                if check == False:
+                    messages.warning(request,"Contraseña Incorrecta")
+            elif User.DoesNotExist:
+                print("Logica correcta")
                     
     else:
         form = LoginForm()

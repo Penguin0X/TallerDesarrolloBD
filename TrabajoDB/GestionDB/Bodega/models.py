@@ -15,7 +15,7 @@ class Personal(models.Model):
 
 class Ubicacion(models.Model):
     
-    _id = models.IntegerField(primary_key=True, default=None)
+    id = models.IntegerField(primary_key=True, default=None)
     nombreUbicacion = models.CharField(max_length=100)
     descripcion = models.CharField(max_length=255)
 
@@ -75,3 +75,4 @@ class Juego(models.Model):
 
     def __str__(self):
         return self.nombreJuego
+    

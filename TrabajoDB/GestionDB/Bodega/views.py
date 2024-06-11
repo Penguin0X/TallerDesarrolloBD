@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from .models import Juego,Consola  
+from .models import Juego,Consola,Estado  
 from .forms import FormJuegos,EditarJuegos
 from django.contrib import messages
 
@@ -50,18 +50,51 @@ def buscar_juego(request):
         
         if filtro == 'Consola':
             juegos = Juego.objects.filter(consola={'nombreConsola':buscar})
-            print("filtro:", filtro)
-            print("buscar:", buscar)
-            print(juegos)
         
         elif filtro == 'nombreJuego':
             juegos = Juego.objects.filter(nombreJuego__icontains=buscar)
-            print("filtro:", filtro)
-            print("buscar:", buscar)
-            print(juegos)
             
         else:
             messages.error(request,"Error con la busqueda")
             juegos = Juego.objects.none()
 
     return render(request, 'bodega/lista_juegos.html', {'juegos': juegos})
+
+def aumentarJuego(request,pk):
+    juego = get_object_or_404(Juego, pk=pk)
+    if request.method == 'GET':
+        juego.unidades['cantidad'] += 1
+        if juego.unidades['cantidad'] > 0:
+            estados = Estado.objects.get(pk=0)
+            juego.estado = {
+                'id': estados.id,
+                'nombreEstado':estados.nombreEstado
+                }
+            
+        juego.save()
+        
+
+    juegos = Juego.objects.all()
+    return render(request, 'bodega/lista_juegos.html', {'juegos': juegos})
+
+def disminuirJuego(request,pk):
+    juego = get_object_or_404(Juego, pk=pk)
+    if request.method == 'GET':
+        if juego.unidades['cantidad'] <= 0:
+            messages.warning(request, 'El Juego ya esta en 0')
+        else:
+            juego.unidades['cantidad'] -= 1
+            print(juego.unidades)
+            if juego.unidades['cantidad'] == 0:
+                estados = Estado.objects.get(pk=1)
+                juego.estado = {
+                    'id': estados.id,
+                    'nombreEstado':estados.nombreEstado
+                    }
+            juego.save()
+                
+
+
+    juegos = Juego.objects.all()
+    return render(request, 'bodega/lista_juegos.html', {'juegos': juegos})
+        

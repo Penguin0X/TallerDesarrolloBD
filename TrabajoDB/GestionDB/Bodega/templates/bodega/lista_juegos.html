@@ -67,19 +67,25 @@
                     <td>{{ juego.consola.nombreConsola }}</td>
                     <td>{{ juego.distribucion.localidadDistribucion }}</td>
                     <td>{{ juego.estado.nombreEstado }}</td>
-                    <td>{{ juego.unidades }}</td>
+                    <td>
+                        {{ juego.unidades.ubicacion }} : {{ juego.unidades.cantidad }}
+                        <a href="{% url 'disminuir' juego.pk %}" class="btn btn-danger btn-sm">-</a>
+                        <a href="{% url 'aumentar' juego.pk %}" class="btn btn-success btn-sm">+</a>
+                    </td>
                     <td>
                         <a href="{% url 'editar_juego' juego.pk %}" class="btn btn-primary btn-sm">Editar</a>
                         <form action="{% url 'eliminar_juego' juego.pk %}" method="post" style="display: inline;">
                             {% csrf_token %}
                             <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
-                        </form>
+                            </form>
+                        
                     </td>
                 </tr>
                 {% endfor %}
             </tbody>
         </table>
         <a href="{% url 'agregar_juego' %}" class="btn btn-success">Agregar Juego</a>
+
     </div>
 </body>
 

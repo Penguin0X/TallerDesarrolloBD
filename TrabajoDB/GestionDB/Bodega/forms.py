@@ -56,6 +56,23 @@ class EditarJuegos(forms.ModelForm):
     estado = forms.ModelChoiceField(queryset=Estado.objects.all(),empty_label="Seleccionar Estado")
     Plataforma = forms.ModelChoiceField(queryset=Consola.objects.all(), empty_label="Seleccionar Plataforma")
     Región = forms.ModelChoiceField(queryset=Distribucion.objects.all(), empty_label="Seleccionar Región")
+    ubicacion = forms.ModelChoiceField(queryset=Ubicacion.objects.all(), empty_label="Seleccionar Ubicación")
+    unidades = forms.IntegerField()
+    
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        if self.instance:
+            
+            estado_nombre = self.instance.estado
+            if estado_nombre:
+                try:
+                    estado_nombre = self.instance.estado.get('nombreEstado')
+                    self.fields['estado'].initial = Estado.objects.get(nombreEstado=estado_nombre)
+                except:
+                    pass
+            plataforma_id = self.instance.consola.get('nombreConsola')
+            
+            self.fields['Plataforma'].initial = Consola.objects.get(nombreConsola=plataforma_id)
     
     def save(self, commit=True):
         juego = super().save(commit=False)
@@ -63,10 +80,14 @@ class EditarJuegos(forms.ModelForm):
         estadoSeleccionado = self.cleaned_data['estado']
         consolaSeleccionada = self.cleaned_data['Plataforma']
         regionSeleccionada = self.cleaned_data['Región']
+        ubicacionSeleccionada = self.cleaned_data['ubicacion']
+        stock = self.cleaned_data['unidades']
+        stockid = juego.id
         
         estadoEncontrado = Estado.objects.get(pk=estadoSeleccionado.id)
         consolaEncontrada = Consola.objects.get(pk=consolaSeleccionada.id)
         regionEncontrada = Distribucion.objects.get(pk=regionSeleccionada.id)
+        ubicacionEncontrada = Ubicacion.objects.get(pk=ubicacionSeleccionada.id)
         juego.consola = {
             'id':consolaEncontrada.id,
             'nombreConsola':consolaEncontrada.nombreConsola,
@@ -77,12 +98,20 @@ class EditarJuegos(forms.ModelForm):
             'localidadDistribucion':regionEncontrada.localidadDistribucion,
             'siglaDistribucion':regionEncontrada.siglaDistribucion
         }
-        
         juego.estado = {
             'id': estadoEncontrado.id,
             'nombreEstado':estadoEncontrado.nombreEstado
         }
-        
+        juego.ubicacion = {
+            'id': ubicacionEncontrada.id,
+            'nombreUbicacion':ubicacionEncontrada.nombreUbicacion,
+            'descripcion':ubicacionEncontrada.descripcion
+        }
+        juego.unidades = {
+            'id':stockid,
+            'ubicacion':ubicacionEncontrada.nombreUbicacion,
+            'cantidad':stock
+        }
         if commit:
             juego.save()
         
