@@ -10,10 +10,11 @@ def login_view(request):
         form = LoginForm(request.POST)
         if form.is_valid():
             username = form.cleaned_data.get('username')
-            password = form.cleaned_data.get('contrasena')
+            password = form.cleaned_data.get('password')
             user = User.objects.get(username=username)
             if user:
-                check = check_password(password,password)
+                check = check_password(password,user.contrasena)
+                print(password)
                 print(check)
                 if check == True:
                     if user.rol['id'] == 2:
